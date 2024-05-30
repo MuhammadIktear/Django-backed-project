@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{%block content%}
+{%load crispy_forms_tags%}
+<form method="post" class="container pt-5">
+    {% csrf_token %}
+    {{form | crispy}}
+    <button class="btn btn-warning">Add</button>
+</form>
+{%endblock%}
